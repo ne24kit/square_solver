@@ -1,8 +1,6 @@
 #ifndef SOLUTION_H_INCLUDED
 #define SOLUTION_H_INCLUDED
 
-#include "tests.h"
-
 /*!
     \brief This function organises the entry of the coefficients a, b and c of a square equation from the console
     \details Contains a loop that includes functions:
@@ -64,6 +62,5 @@ void solve_incomplete_quadratic(double a, double b, double c, double *px1, doubl
 
 */
 void solve_lin(double b, double c, double *px1, int *pcount_sol);
-
 
 #endif // SOLUTION_H_INCLUDED

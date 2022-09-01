@@ -1,5 +1,6 @@
 #ifndef USER_HANDLING_H_INCLUDED
 #define USER_HANDLING_H_INCLUDED
+
 /// Prints a welcome message.
 /*!
 The function prints this test:

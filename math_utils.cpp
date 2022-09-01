@@ -4,6 +4,7 @@
 #include "math_utils.h"
 
 
+
 bool double_cmp(double m, double n)
 {
     const double small_number = 1e-8;

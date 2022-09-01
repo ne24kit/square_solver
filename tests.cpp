@@ -8,7 +8,7 @@
 
 void testing_solver()
 {
-    struct data_tests dt[] =
+    struct tests dt[] =
     {
         {0,  0,  0, INF_SOL,  NAN,   NAN},
         {1,  2,  1, ONE_SOL,   -1,   NAN},
@@ -28,7 +28,7 @@ void testing_solver()
     testing_token_struct(&dt[0], n);
 }
 
-void testing_token_struct(struct data_tests st[0], int n)
+void testing_token_struct(struct tests st[0], int n)
 {
 
     for (int i = 0; i < n; i++)
@@ -37,11 +37,11 @@ void testing_token_struct(struct data_tests st[0], int n)
         double x1 = NAN, x2 = NAN;
         int count_sol = 0;
 
-        solve_sq_lin(st[i].example.t_a, st[i].example.t_b, st[i].example.t_c, &x1, &x2, &count_sol);
+        solve_sq_lin(st[i].t_a, st[i].t_b, st[i].t_c, &x1, &x2, &count_sol);
 
-        if (double_NAN_cmp(st[i].example.t_x1, x1)
-            && double_NAN_cmp(st[i].example.t_x2, x2)
-            && st[i].example.t_count_sol == count_sol)
+        if (double_NAN_cmp(st[i].t_x1, x1)
+            && double_NAN_cmp(st[i].t_x2, x2)
+            && st[i].t_count_sol == count_sol)
 
             printf("TEST %2d IS CORRECT\n", i + 1);
 
@@ -51,21 +51,20 @@ void testing_token_struct(struct data_tests st[0], int n)
 
             printf("TEST %2d IS FAILED\n", i + 1);
 
-            if (st[i].example.t_count_sol != count_sol)
+            if (st[i].t_count_sol != count_sol)
                 printf("EXPECTED COUNT OF ROOTS: %d\n"
-                       "FAILED   COUNT OF ROOTS: %d\n", st[i].example.t_count_sol, count_sol);
+                       "FAILED   COUNT OF ROOTS: %d\n", st[i].t_count_sol, count_sol);
 
-            if (!(double_NAN_cmp(st[i].example.t_x1, x1)))
+            if (!(double_NAN_cmp(st[i].t_x1, x1)))
                 printf("EXPECTED   FIRST   ROOT: %lg\n"
-                       "FAILED     FIRST   ROOT: %lg\n", st[i].example.t_x1, x1);
+                       "FAILED     FIRST   ROOT: %lg\n", st[i].t_x1, x1);
 
-            if (!(double_NAN_cmp(st[i].example.t_x2, x2)))
+            if (!(double_NAN_cmp(st[i].t_x2, x2)))
                 printf("EXPECTED   SECOND  ROOT: %lg\n"
-                       "FAILED     SECOND  ROOT: %lg\n", st[i].example.t_x2, x2);
+                       "FAILED     SECOND  ROOT: %lg\n", st[i].t_x2, x2);
 
             print_stars();
 
         }
     }
 }
-

@@ -1,14 +1,10 @@
 #include <stdio.h>
-#include <TXLib.h>
 #include <math.h>
 #include "solution.h"
 #include "user_handling.h"
-#include "tests.h"
-
+//to compile use: g++ main.cpp solution.cpp user_handling.cpp math_utils.cpp
 int main()
 {
-    testing_solver();
-
     print_greetings();
 
     solve_equation();

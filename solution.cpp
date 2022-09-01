@@ -4,7 +4,7 @@
 #include <assert.h>
 #include "solution.h"
 #include "user_handling.h"
-#include "tests.h"
+
 
 void solve_equation()
 {
@@ -74,7 +74,6 @@ void solve_square(double a, double b, double c, double *px1, double *px2, int *p
 
     if (double_cmp(b, 0))
         solve_incomplete_quadratic(a, b, c, px1, px2, pcount_sol);
-
 }
 
 void solve_incomplete_quadratic(double a, double b, double c, double *px1, double *px2, int *pcount_sol)
@@ -128,7 +127,7 @@ void solve_lin(double b, double c, double *px1, int *pcount_sol)
 }
 
 void solve_sq_lin(double a, double b, double c, double *px1, double *px2, int *pcount_sol)
-{                                //TODO check_quadratic_or_linear_equation()
+{
     assert(px1 != NULL);
     assert(px2 != NULL);
     assert(pcount_sol != NULL);
@@ -140,5 +139,3 @@ void solve_sq_lin(double a, double b, double c, double *px1, double *px2, int *p
     else
         solve_square(a, b, c, px1, px2, pcount_sol);
 }
-
-

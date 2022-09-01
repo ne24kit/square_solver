@@ -1,10 +1,7 @@
 #ifndef TESTS_H_INCLUDED
 #define TESTS_H_INCLUDED
-#include "solution.h"
-#include "math_utils.h"
 
-///
-struct test
+struct tests
 {
     double t_a;
     double t_b;
@@ -14,14 +11,8 @@ struct test
     double t_x2;
 };
 
-struct data_tests
-{
-    struct test example;
-};
-
 void testing_solver();
 
-void testing_token_struct(struct data_tests st[0], int n);
-
+void testing_token_struct(struct tests st[0], int n);
 
 #endif // TESTS_H_INCLUDED

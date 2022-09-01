@@ -20,7 +20,6 @@ bool double_cmp(double m, double n);
 
 bool double_NAN_cmp(double m, double n);
 
-
 /*!
     \brief Swaps pointer values if the first pointer value is greater than the second
     \details If the value of pointer p1 is greater than p2,
@@ -30,8 +29,5 @@ bool double_NAN_cmp(double m, double n);
     \param p1, p2 Pointers to exchange in a particular case
 */
 void change_double(double *p1, double *p2);
-
-
-
 
 #endif // MATH_UTILS_H_INCLUDED

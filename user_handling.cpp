@@ -12,7 +12,8 @@ void print_greetings(void)
 
 void print_stars(void)
 {
-    for (int i = 0; i < 60; i++)
+    int const limit = 60;
+    for (int i = 0; i < limit; i++)
         printf("*");
     printf("\n");
 }
