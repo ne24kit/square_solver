@@ -13,6 +13,7 @@ void print_greetings(void)
 void print_stars(void)
 {
     int const limit = 60;
+    //  ^~~~~ TODO: works, but very unusual style, consider using "const int" with const before type name
     for (int i = 0; i < limit; i++)
         printf("*");
     printf("\n");
