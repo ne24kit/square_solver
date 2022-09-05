@@ -15,6 +15,7 @@ void print_greetings(void);
 
 /// Prints  60 stars in one line.
 void print_stars(void);
+// TODO:         ^~~~~ consider passing number of stars to print...
 
 /*!
     \brief Outputs to the console screen the number of solutions and the roots of the quadratic equation
@@ -24,5 +25,12 @@ void print_stars(void);
 
 */
 void count_sol_handling(int count_sol, double x1, double x2);
+//   ^~~~~ TODO: I'm still not satisfied with name! Does it count? No!
+//               (And if it did I would expect it to return integer)
+//
+//               And handling is still to "generic", you can describe anything
+//               with it. I would go as far as telling you that function in general is: 
+//
+//               type handle_parameters(...); So your name doesn't add any clarity!
 
 #endif // USER_HANDLING_H_INCLUDED

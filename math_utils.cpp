@@ -8,6 +8,8 @@
 bool double_cmp(double m, double n)
 {
     const double small_number = 1e-8;
+    //           ^~~~~ TODO: This is not just "small number"
+    //                       Use conventional name "EPSILON"
     return fabs(m - n) < small_number;
 }
 
@@ -33,7 +35,7 @@ void change_double(double *p1, double *p2)
 
     if (*p1 > *p2) {
 
-        *p1 = *p2;
+        *p1 = *p2; // TODO: extract in "swap"
         *p2 = temp;
     }
 }
